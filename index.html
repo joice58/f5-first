@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aratt Developers launches the Fabulous Five. A curated collection of exceptional luxury and ultra-luxury lifestyles in Bangalore. Discover the Ayatana and Alchemy series.">
+    <title>Aratt Developers | Fabulous Five | Ultra-Luxury & Luxury Residences</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Premium Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-wordmark" id="logo-aratt">
+                <img src="assets/logo_aratt.png" alt="ARATT Logo" class="logo-img">
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#concept" class="nav-link">The Concept</a>
+                <a href="#showcase" class="nav-link">The Collection</a>
+                <a href="#enquiry" class="nav-btn">Enquire Now</a>
+            </nav>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(10, 10, 10, 1)), url('assets/hero_bg.jpg');">
+            <div class="hero-content">
+                <div class="hero-subheading animate-fade-in">L A U N C H I N G</div>
+                <div class="hero-logo-container animate-scale-up">
+                    <img src="assets/logo_fabulous_five.png" alt="Fabulous Five Logo" class="hero-logo-img">
+                </div>
+                <h1 class="hero-title animate-fade-in-delayed">A Curated Collection of Exceptional Lifestyles</h1>
+                <p class="hero-tagline animate-fade-in-delayed">Expanding Over 6 Million Sq. Ft. of Pure Architectural Splendor</p>
+                <div class="hero-cta-group animate-fade-in-delayed">
+                    <a href="#showcase" class="btn btn-primary-gold">Explore The Series</a>
+                    <a href="#enquiry" class="btn btn-secondary-outline">Schedule Virtual Tour</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- The Concept Section -->
+        <section class="concept-section" id="concept">
+            <div class="container grid-2">
+                <div class="concept-text-side">
+                    <div class="section-tag">The Philosophy</div>
+                    <h2 class="section-title">The Fabulous Five</h2>
+                    <p class="concept-paragraph">
+                        Aratt Developers introduces a bold new benchmark in luxury living. The <strong>Fabulous Five</strong> is a handpicked cohort of architectural masterpieces designed to serve as sanctuaries for the modern elite. 
+                    </p>
+                    <p class="concept-paragraph">
+                        Spanning over 6 million square feet of meticulous planning, we present two distinct lifestyle philosophies: the <strong>Ayatana Series</strong>—a realm of ultra-luxury that transcends ordinary residential standards, and the <strong>Alchemy Series</strong>—a golden standard of refined luxury that infuses scientific precision with high art.
+                    </p>
+                    <div class="concept-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-num">03</span>
+                            <span class="highlight-label">Ayatana Projects</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-num">02</span>
+                            <span class="highlight-label">Alchemy Projects</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-num">6M+</span>
+                            <span class="highlight-label">Square Feet</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="concept-image-side">
+                    <div class="glass-frame">
+                        <img src="assets/logo_fabulous_five.png" alt="Fabulous Five Concept Logo" class="concept-brand-logo">
+                        <div class="frame-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Series Showcase Section -->
+        <section class="showcase-section" id="showcase">
+            <div class="container text-center">
+                <div class="section-tag">The Portfolios</div>
+                <h2 class="section-title">Explore The Series</h2>
+                <p class="section-subtitle">Switch between our ultra-luxury Ayatana Series and premium luxury Alchemy Series.</p>
+                
+                <!-- Custom Series Switcher -->
+                <div class="series-switcher">
+                    <button class="switcher-btn active" id="btn-all" onclick="switchSeries('all')">
+                        <span class="series-name">FABULOUS FIVE</span>
+                        <span class="series-tier">All Projects</span>
+                    </button>
+                    <button class="switcher-btn" id="btn-ayatana" onclick="switchSeries('ayatana')">
+                        <span class="series-name">AYATANA</span>
+                        <span class="series-tier">Ultra Luxury Series</span>
+                    </button>
+                    <button class="switcher-btn" id="btn-alchemy" onclick="switchSeries('alchemy')">
+                        <span class="series-name">ALCHEMY</span>
+                        <span class="series-tier">Luxury Series</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Showcase Grid Container -->
+            <div class="container portfolio-container">
+                <!-- Single Filterable Grid -->
+                <div class="projects-grid active" id="projects-grid">
+                    <!-- Project Card 1: Legacy Heights -->
+                    <div class="project-card card-gold" data-series="ayatana">
+                        <div class="card-image-wrapper">
+                            <img src="assets/legacy_heights.jpg" alt="Legacy Heights Architectural Render" class="card-img">
+                            <div class="card-badge">Ayatana Series</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-loc"><i class="fa-solid fa-location-dot"></i> Richmond Road</span>
+                                <span class="card-type"><i class="fa-solid fa-building"></i> Penthouses</span>
+                            </div>
+                            <h3 class="card-title">Legacy Heights</h3>
+                            <p class="card-tagline">The Pinnacle of Sky-High Living</p>
+                            <p class="card-desc">Private elevator access, personal sky-pools, and breathtaking 360° views of Bangalore's skyline.</p>
+                            <!-- Project Card Countdown -->
+                            <div class="card-countdown" data-launch-days="2.2">
+                                <span class="countdown-label"><i class="fa-solid fa-clock"></i> Phase 2 Unlocks In:</span>
+                                <span class="countdown-values"><span class="c-days">00</span>d <span class="c-hours">00</span>h <span class="c-mins">00</span>m <span class="c-secs">00</span>s</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-card-details" onclick="openProjectModal('legacy-heights')">Explore Details</button>
+                                <a href="#enquiry" class="btn btn-card-enquire" onclick="prefillForm('Legacy Heights')">Request Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Sonnet in Stone -->
+                    <div class="project-card card-gold" data-series="ayatana">
+                        <div class="card-image-wrapper">
+                            <img src="assets/sonnet_in_stone.jpg" alt="Sonnet in Stone Architectural Render" class="card-img">
+                            <div class="card-badge">Ayatana Series</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-loc"><i class="fa-solid fa-location-dot"></i> Whitefield</span>
+                                <span class="card-type"><i class="fa-solid fa-house-chimney"></i> Stone Villas</span>
+                            </div>
+                            <h3 class="card-title">Sonnet in Stone</h3>
+                            <p class="card-tagline">Poetry Carved in Nature's Elements</p>
+                            <p class="card-desc">Architectural wonders crafted from natural stone, complete with lush private gardens and tranquil waterfalls.</p>
+                            <!-- Project Card Countdown -->
+                            <div class="card-countdown" data-launch-days="4.5">
+                                <span class="countdown-label"><i class="fa-solid fa-clock"></i> Phase 2 Unlocks In:</span>
+                                <span class="countdown-values"><span class="c-days">00</span>d <span class="c-hours">00</span>h <span class="c-mins">00</span>m <span class="c-secs">00</span>s</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-card-details" onclick="openProjectModal('sonnet-in-stone')">Explore Details</button>
+                                <a href="#enquiry" class="btn btn-card-enquire" onclick="prefillForm('Sonnet in Stone')">Request Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: Sky Crest -->
+                    <div class="project-card card-gold" data-series="ayatana">
+                        <div class="card-image-wrapper">
+                            <img src="assets/sky_crest.jpg" alt="Sky Crest Architectural Render" class="card-img">
+                            <div class="card-badge">Ayatana Series</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-loc"><i class="fa-solid fa-location-dot"></i> Hebbal</span>
+                                <span class="card-type"><i class="fa-solid fa-building"></i> Sky Mansions</span>
+                            </div>
+                            <h3 class="card-title">Sky Crest</h3>
+                            <p class="card-tagline">Where Luxury Meets the Clouds</p>
+                            <p class="card-desc">High-altitude homes integrated with private helipads, wrap-around sky gardens, and glass floors.</p>
+                            <!-- Project Card Countdown -->
+                            <div class="card-countdown" data-launch-days="6.1">
+                                <span class="countdown-label"><i class="fa-solid fa-clock"></i> Phase 2 Unlocks In:</span>
+                                <span class="countdown-values"><span class="c-days">00</span>d <span class="c-hours">00</span>h <span class="c-mins">00</span>m <span class="c-secs">00</span>s</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-card-details" onclick="openProjectModal('sky-crest')">Explore Details</button>
+                                <a href="#enquiry" class="btn btn-card-enquire" onclick="prefillForm('Sky Crest')">Request Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: Alchemy Stratos -->
+                    <div class="project-card card-silver" data-series="alchemy">
+                        <div class="card-image-wrapper">
+                            <img src="assets/alchemy_stratos.jpg" alt="Alchemy Stratos Architectural Render" class="card-img">
+                            <div class="card-badge">Alchemy Series</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-loc"><i class="fa-solid fa-location-dot"></i> Koramangala</span>
+                                <span class="card-type"><i class="fa-solid fa-building"></i> Premium Apts</span>
+                            </div>
+                            <h3 class="card-title">Alchemy Stratos</h3>
+                            <p class="card-tagline">Sophisticated Urban Heights</p>
+                            <p class="card-desc">Modern minimalist spaces boasting expansive balconies and double-height loft layouts.</p>
+                            <!-- Project Card Countdown -->
+                            <div class="card-countdown" data-launch-days="8.7">
+                                <span class="countdown-label"><i class="fa-solid fa-clock"></i> Phase 2 Unlocks In:</span>
+                                <span class="countdown-values"><span class="c-days">00</span>d <span class="c-hours">00</span>h <span class="c-mins">00</span>m <span class="c-secs">00</span>s</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-card-details" onclick="openProjectModal('alchemy-stratos')">Explore Details</button>
+                                <a href="#enquiry" class="btn btn-card-enquire" onclick="prefillForm('Alchemy Stratos')">Request Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5: Alchemy Helios -->
+                    <div class="project-card card-silver" data-series="alchemy">
+                        <div class="card-image-wrapper">
+                            <img src="assets/alchemy_helios.jpg" alt="Alchemy Helios Architectural Render" class="card-img">
+                            <div class="card-badge">Alchemy Series</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-loc"><i class="fa-solid fa-location-dot"></i> Sarjapur Road</span>
+                                <span class="card-type"><i class="fa-solid fa-building"></i> Sunlit Homes</span>
+                            </div>
+                            <h3 class="card-title">Alchemy Helios</h3>
+                            <p class="card-tagline">Basking in Perpetual Light</p>
+                            <p class="card-desc">Solar-architected homes engineered to maximize natural daylight and feature private rooftop solar gardens.</p>
+                            <!-- Project Card Countdown -->
+                            <div class="card-countdown" data-launch-days="11.3">
+                                <span class="countdown-label"><i class="fa-solid fa-clock"></i> Phase 2 Unlocks In:</span>
+                                <span class="countdown-values"><span class="c-days">00</span>d <span class="c-hours">00</span>h <span class="c-mins">00</span>m <span class="c-secs">00</span>s</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-card-details" onclick="openProjectModal('alchemy-helios')">Explore Details</button>
+                                <a href="#enquiry" class="btn btn-card-enquire" onclick="prefillForm('Alchemy Helios')">Request Early Access</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Showcase Cluster Section -->
+        <section class="cluster-section">
+            <div class="container text-center" style="margin-bottom: 4rem;">
+                <div class="section-tag">Architectural Synergy</div>
+                <h2 class="section-title">The Blueprint of Luxury</h2>
+                <p class="section-subtitle">Five extraordinary landmarks bound by one singular vision of sophisticated modern design and curated lifestyles.</p>
+            </div>
+            <div class="container grid-2">
+                <!-- Left Side: Slanted Glassmorphic Brand Card -->
+                <div class="cluster-left-side">
+                    <div class="cluster-brand-card animate-zoom-in">
+                        <div class="cluster-brand-content">
+                            <img src="assets/logo_fabulous_five.png" alt="Fabulous Five Logo" class="cluster-brand-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Staggered Project Cluster Cards -->
+                <div class="cluster-right-side">
+                    <div class="cluster-right-wrapper">
+                        <!-- Card 1: Legacy Heights -->
+                        <div class="cluster-card c-card-1 card-gold" onclick="openProjectModal('legacy-heights')">
+                            <div class="cluster-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/legacy_heights.jpg');"></div>
+                            <div class="cluster-card-badge">01</div>
+                            <div class="cluster-card-info">
+                                <h4>Legacy Heights</h4>
+                                <span class="cluster-card-series">Ayatana</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Sonnet in Stone -->
+                        <div class="cluster-card c-card-2 card-gold" onclick="openProjectModal('sonnet-in-stone')">
+                            <div class="cluster-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/sonnet_in_stone.jpg');"></div>
+                            <div class="cluster-card-badge">02</div>
+                            <div class="cluster-card-info">
+                                <h4>Sonnet in Stone</h4>
+                                <span class="cluster-card-series">Ayatana</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Sky Crest -->
+                        <div class="cluster-card c-card-3 card-gold" onclick="openProjectModal('sky-crest')">
+                            <div class="cluster-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/sky_crest.jpg');"></div>
+                            <div class="cluster-card-badge">03</div>
+                            <div class="cluster-card-info">
+                                <h4>Sky Crest</h4>
+                                <span class="cluster-card-series">Ayatana</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Alchemy Stratos -->
+                        <div class="cluster-card c-card-4 card-silver" onclick="openProjectModal('alchemy-stratos')">
+                            <div class="cluster-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/alchemy_stratos.jpg');"></div>
+                            <div class="cluster-card-badge">04</div>
+                            <div class="cluster-card-info">
+                                <h4>Alchemy Stratos</h4>
+                                <span class="cluster-card-series">Alchemy</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Alchemy Helios -->
+                        <div class="cluster-card c-card-5 card-silver" onclick="openProjectModal('alchemy-helios')">
+                            <div class="cluster-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/alchemy_helios.jpg');"></div>
+                            <div class="cluster-card-badge">05</div>
+                            <div class="cluster-card-info">
+                                <h4>Alchemy Helios</h4>
+                                <span class="cluster-card-series">Alchemy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry Form Section -->
+        <section class="enquiry-section" id="enquiry">
+            <div class="container grid-2">
+                <div class="enquiry-details-side">
+                    <div class="section-tag">Private Concierge</div>
+                    <h2 class="section-title">Schedule A Private Preview</h2>
+                    <p class="concept-paragraph">
+                        Exclusivity begins with a conversation. Connect with our dedicated sales relationship manager to request digital floor plans, architectural booklets, or arrange an exclusive private limousine tour of our site layouts.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h5 class="contact-lbl">Call Concierge</h5>
+                                <p class="contact-val">+91 80 4400 9900</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h5 class="contact-lbl">Official Email</h5>
+                                <p class="contact-val">luxury@aratt.in</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div>
+                                <h5 class="contact-lbl">Corporate Gallery</h5>
+                                <p class="contact-val">No. 12, Ayatana Plaza, Richmond Road, Bangalore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="enquiry-form-side">
+                    <div class="glass-form-container">
+                        <!-- Scarcity Ticker Banner -->
+                        <div class="scarcity-ticker">
+                            <i class="fa-solid fa-fire gold-glow-icon"></i> <strong>Phase 1 Pre-Launch:</strong> Only 15 exclusive VIP allocations remaining.
+                        </div>
+                        <!-- Form Switcher Tabs -->
+                        <div class="form-tabs">
+                            <button class="form-tab-btn active" id="tab-customer" onclick="switchFormTab('customer')">Resident Enquiry</button>
+                            <button class="form-tab-btn" id="tab-partner" onclick="switchFormTab('partner')">Channel Partner</button>
+                        </div>
+
+                        <!-- Customer Form (Visible by default) -->
+                        <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                            <h3 class="form-title">Request Bespoke Details</h3>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" required placeholder=" ">
+                                <label for="phone">Phone Number</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="project" name="project" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <optgroup label="Ayatana Series (Ultra Luxury)">
+                                        <option value="Legacy Heights">Legacy Heights</option>
+                                        <option value="Sonnet in Stone">Sonnet in Stone</option>
+                                        <option value="Sky Crest">Sky Crest</option>
+                                    </optgroup>
+                                    <optgroup label="Alchemy Series (Luxury)">
+                                        <option value="Alchemy Stratos">Alchemy Stratos</option>
+                                        <option value="Alchemy Helios">Alchemy Helios</option>
+                                    </optgroup>
+                                    <option value="General Enquiry">General Enquiry - All Projects</option>
+                                </select>
+                                <label for="project" class="select-label">Select Project Interest</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="3" placeholder=" "></textarea>
+                                <label for="message">Custom Message (Optional)</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <span>Submit Request</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <!-- Channel Partner Form (Hidden by default) -->
+                        <form id="partnerForm" onsubmit="handlePartnerFormSubmit(event)" style="display: none;">
+                            <h3 class="form-title">Partner Association</h3>
+                            <div class="form-group">
+                                <input type="text" id="cp-name" name="cp-name" required placeholder=" ">
+                                <label for="cp-name">Contact Person Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="cp-firm" name="cp-firm" required placeholder=" ">
+                                <label for="cp-firm">Firm/Company Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="cp-rera" name="cp-rera" required placeholder=" ">
+                                <label for="cp-rera">RERA Registration Number</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="cp-email" name="cp-email" required placeholder=" ">
+                                <label for="cp-email">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="cp-phone" name="cp-phone" required placeholder=" ">
+                                <label for="cp-phone">Phone Number</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="cp-series" name="cp-series" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="Ayatana Series">Ayatana Series (Ultra Luxury)</option>
+                                    <option value="Alchemy Series">Alchemy Series (Luxury)</option>
+                                    <option value="Both Series">Both Series (Ayatana & Alchemy)</option>
+                                </select>
+                                <label for="cp-series" class="select-label">Select Series Interest</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="cp-message" name="cp-message" rows="3" placeholder=" "></textarea>
+                                <label for="cp-message">Area of Interest / Message (Optional)</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <span>Register Partnership</span>
+                                <i class="fa-solid fa-handshake"></i>
+                            </button>
+                        </form>
+
+                        <!-- Resident Form Success Overlay -->
+                        <div class="form-success-message" id="form-success">
+                            <i class="fa-solid fa-circle-check success-check"></i>
+                            <h4>Thank You, Resident.</h4>
+                            <p>Our private concierge is compiling your requested brochure and will contact you shortly via phone and email.</p>
+                        </div>
+
+                        <!-- Channel Partner Form Success Overlay -->
+                        <div class="form-success-message" id="form-success-partner">
+                            <i class="fa-solid fa-handshake success-check" style="color: var(--gold-primary); font-size: 3.2rem; margin-bottom: 1.2rem; display: block;"></i>
+                            <h4>Association Received.</h4>
+                            <p>Our Channel Partner Relations team will verify your RERA registration and contact you to establish your onboarding pack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top grid-4">
+                <div class="footer-brand">
+                    <h4 class="footer-logo">ARATT</h4>
+                    <p class="footer-about">Crafting premium landmarks for over two decades. Introducing the Fabulous Five—the next level of high-end architectural innovation.</p>
+                </div>
+                <div>
+                    <h5 class="footer-heading">Ayatana Series</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="openProjectModal('legacy-heights')">Legacy Heights</a></li>
+                        <li><a href="#" onclick="openProjectModal('sonnet-in-stone')">Sonnet in Stone</a></li>
+                        <li><a href="#" onclick="openProjectModal('sky-crest')">Sky Crest</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-heading">Alchemy Series</h5>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="openProjectModal('alchemy-stratos')">Alchemy Stratos</a></li>
+                        <li><a href="#" onclick="openProjectModal('alchemy-helios')">Alchemy Helios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-heading">Stay Connected</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Aratt Developers. All rights reserved. RERA Registrations pending. Imagery is conceptual representation only.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Details Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content glassmorphic animate-zoom-in">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close Modal">&times;</button>
+            <div class="modal-grid" id="modal-grid-content">
+                <!-- Javascript will inject specific project information here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Lightbox Modal -->
+    <div class="lightbox" id="lightboxModal">
+        <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-container">
+            <img src="" alt="" class="lightbox-img" id="lightbox-image-element">
+            <div class="lightbox-caption" id="lightbox-caption-element">
+                <h4 id="lightbox-caption-title"></h4>
+                <p id="lightbox-caption-sub"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
